@@ -1,4 +1,4 @@
-name: build package and run tests
+name: build and test package
 
 on:
   workflow_dispatch:

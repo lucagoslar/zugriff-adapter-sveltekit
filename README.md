@@ -1,28 +1,31 @@
-## ts-pkg
+## zugriff-adapter-sveltekit
 
-This is a Boilerplate to create npm packages in TypeScript.
+Deploy your SvelteKit applications with zugriff at the edge.
 
-[![build package and run tests](https://github.com/lucagoslar/ts-pkg/actions/workflows/main.yml/badge.svg)](https://github.com/lucagoslar/ts-pkg/actions/workflows/main.yml)
+[![build and test package](https://github.com/lucagoslar/zugriff-adapter-sveltekit/actions/workflows/main.yml/badge.svg)](https://github.com/lucagoslar/zugriff-adapter-sveltekit/actions/workflows/main.yml)
 
 ## Usage
 
-Install all (dev-)dependencies by running the following.
+Install the adapter and replace your old one as follows.
 
 ```
-  pnpm i
+  npm i --save-dev @zugriff/adapter-sveltekit
 ```
 
-Make sure [husky](https://github.com/typicode/husky) is being installed too.
+```js
+import adapter from '@zugriff/adapter-sveltekit';
 
-```
-  pnpm run prepare
+/** @type {import('@sveltejs/kit').Config} */
+const config = {
+  ...
+	kit: {
+    ...
+		adapter: adapter(),
+	},
+};
+
+export default config;
 ```
 
 \
 _And off we go …_
-
-Build this project with the following.
-
-```
-  pnpm run build
-```

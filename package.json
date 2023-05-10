@@ -1,10 +1,9 @@
 {
-	"name": "ts-pkg",
-	"version": "0.2.0",
-	"description": "Boilerplate to create npm packages in TypeScript.",
+	"name": "@zugriff/adapter-sveltekit",
+	"version": "0.0.1",
+	"description": "Deploy serverless functions with zugriff at the edge.",
 	"exports": {
-		"import": "./dist/index.mjs",
-		"require": "./dist/index.cjs"
+		"import": "./dist/index.mjs"
 	},
 	"types": "./dist/index.d.ts",
 	"files": [
@@ -16,20 +15,14 @@
 		"clean": "rm -rf ./dist",
 		"prepare": "husky install",
 		"test:watch": "jest --watch",
-		"test": "jest",
+		"test": "jest --passWithNoTests",
 		"lint": "eslint ./src/ --fix"
 	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/lucagoslar/ts-pkg.git"
 	},
-	"keywords": [
-		"npm",
-		"boilerplate",
-		"workflow",
-		"typescript",
-		"jest"
-	],
+	"keywords": [],
 	"author": "Luca Goslar <47827429+lucagoslar@users.noreply.github.com>",
 	"license": "MIT",
 	"bugs": {
@@ -38,6 +31,7 @@
 	"homepage": "https://github.com/lucagoslar/ts-pkg#readme",
 	"devDependencies": {
 		"@rollup/plugin-typescript": "^11.1.0",
+		"@sveltejs/kit": "^1.16.3",
 		"@types/jest": "^29.5.1",
 		"@types/node": "^20.1.2",
 		"@typescript-eslint/eslint-plugin": "^5.59.5",
@@ -50,9 +44,14 @@
 		"jest-extended": "^3.2.4",
 		"prettier": "^2.8.8",
 		"rollup": "^3.21.6",
+		"svelte": "^3.59.1",
 		"ts-jest": "^29.1.0",
 		"ts-node": "^10.9.1",
 		"tslib": "^2.5.0",
-		"typescript": "^5.0.4"
+		"typescript": "^5.0.4",
+		"vite": "^4.3.5"
+	},
+	"dependencies": {
+		"esbuild": "^0.17.18"
 	}
 }

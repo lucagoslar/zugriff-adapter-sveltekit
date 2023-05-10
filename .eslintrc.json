@@ -12,5 +12,9 @@
 		"ecmaVersion": 13,
 		"sourceType": "module"
 	},
+	"rules": {
+		"@typescript-eslint/ban-ts-comment": "off",
+		"no-empty": "off"
+	},
 	"plugins": ["@typescript-eslint", "prettier"]
 }
