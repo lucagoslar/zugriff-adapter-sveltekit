@@ -1,6 +1,6 @@
 {
 	"name": "@zugriff/adapter-sveltekit",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "Deploy serverless functions with zugriff at the edge.",
 	"exports": {
 		"import": "./dist/index.mjs"
@@ -20,15 +20,15 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/lucagoslar/ts-pkg.git"
+		"url": "git+https://github.com/lucagoslar/zugriff-adapter-sveltekit.git"
 	},
 	"keywords": [],
 	"author": "Luca Goslar <47827429+lucagoslar@users.noreply.github.com>",
 	"license": "MIT",
 	"bugs": {
-		"url": "https://github.com/lucagoslar/ts-pkg/issues"
+		"url": "https://github.com/lucagoslar/zugriff-adapter-sveltekit/issues"
 	},
-	"homepage": "https://github.com/lucagoslar/ts-pkg#readme",
+	"homepage": "https://github.com/lucagoslar/zugriff-adapter-sveltekit#readme",
 	"devDependencies": {
 		"@rollup/plugin-typescript": "^11.1.0",
 		"@sveltejs/kit": "^1.16.3",
