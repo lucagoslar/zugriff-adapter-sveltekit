@@ -8,7 +8,7 @@ const initialized = server.init({
 	env: process.env,
 });
 
-export async function handler(request: Request) {
+export async function __zugriff__request_handler(request: Request) {
 	await initialized;
 	return server.respond(request, {});
 }
