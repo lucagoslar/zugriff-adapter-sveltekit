@@ -79,12 +79,12 @@ function writeFile(file: string, data: string) {
 	fs.writeFileSync(file, data);
 }
 
-function discoverFiles(basePath: string, clean: boolean = true): Array<string> {
+function discoverFiles(basePath: string, clean = true): Array<string> {
 	let files: Array<string> = [];
 
-	for (let discovery of fs.readdirSync(basePath)) {
-		let fullFilePath = path.join(basePath, discovery);
-		let discoveryStats = fs.lstatSync(fullFilePath);
+	for (const discovery of fs.readdirSync(basePath)) {
+		const fullFilePath = path.join(basePath, discovery);
+		const discoveryStats = fs.lstatSync(fullFilePath);
 
 		if (discoveryStats.isDirectory()) {
 			files = files.concat(discoverFiles(fullFilePath, false));
