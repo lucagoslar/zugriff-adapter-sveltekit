@@ -62,6 +62,11 @@ export default function () {
 				sourcemap: 'linked',
 				banner: { js: 'globalThis.global = globalThis;' },
 			});
+
+			writeFile(
+				zugriff_content + '/_functions/config.json',
+				JSON.stringify({ static: discoverFiles(static_content) })
+			);
 		},
 	};
 }
@@ -72,4 +77,23 @@ function writeFile(file: string, data: string) {
 	} catch {}
 
 	fs.writeFileSync(file, data);
+}
+
+function discoverFiles(basePath: string, clean: boolean = true): Array<string> {
+	let files: Array<string> = [];
+
+	for (let discovery of fs.readdirSync(basePath)) {
+		let fullFilePath = path.join(basePath, discovery);
+		let discoveryStats = fs.lstatSync(fullFilePath);
+
+		if (discoveryStats.isDirectory()) {
+			files = files.concat(discoverFiles(fullFilePath, false));
+		} else {
+			files.push(fullFilePath);
+		}
+	}
+
+	if (clean) files = files.map((file) => file.substring(basePath.length));
+
+	return files;
 }
