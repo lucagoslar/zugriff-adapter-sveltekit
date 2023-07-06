@@ -8,7 +8,7 @@ const initialized = server.init({
 	env: process.env,
 });
 
-export async function __zugriff__request_handler(request: Request) {
+addEventListener('fetch', async (request: zugriffRequest) => {
 	await initialized;
-	return server.respond(request, {});
-}
+	request.respondWith(server.respond(request, {}));
+});
