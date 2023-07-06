@@ -6,4 +6,4 @@ interface zugriffRequest extends Request {
 
 type callback = (request: zugriffRequest) => void;
 
-declare function addEventListener(string, callback): Uint8Array;
+declare function addEventListener(string, callback): void;
