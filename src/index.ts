@@ -57,9 +57,10 @@ export default function () {
 				outfile: zugriff_content + '/_functions/index.js',
 				target: 'esnext',
 				bundle: true,
+				minify: true,
+				legalComments: 'none',
 				platform: 'browser',
 				format: 'esm',
-				sourcemap: 'linked',
 				banner: { js: 'globalThis.global = globalThis;' },
 			});
 
