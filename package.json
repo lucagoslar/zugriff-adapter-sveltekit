@@ -1,6 +1,6 @@
 {
 	"name": "@zugriff/adapter-sveltekit",
-	"version": "0.0.5",
+	"version": "0.0.6",
 	"description": "Deploy serverless functions with zugriff at the edge.",
 	"exports": {
 		"import": "./dist/index.mjs"
