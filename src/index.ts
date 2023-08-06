@@ -66,7 +66,10 @@ export default function () {
 
 			writeFile(
 				zugriff_content + '/_functions/config.json',
-				JSON.stringify({ static: discoverFiles(static_content) })
+				JSON.stringify({
+					dynamic: [{ path: '/index.js', regex: '/^.*$/' }],
+					static: discoverFiles(static_content),
+				})
 			);
 		},
 	};
