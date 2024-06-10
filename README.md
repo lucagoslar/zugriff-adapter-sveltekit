@@ -1,3 +1,6 @@
+> [!IMPORTANT]
+> This package is superseded by [`@zugriff/adapter-sveltekit`](https://npmjs.com/@zugriff/adapter-sveltekit) in [`zugriffcloud/os`](https://github.com/zugriffcloud/os).
+
 ## zugriff-adapter-sveltekit
 
 Deploy your SvelteKit applications with zugriff at the edge.
